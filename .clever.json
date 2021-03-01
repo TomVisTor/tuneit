@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_4db752cb-c370-43dd-a6ce-ccc74179f36f",
+      "org_id": "user_86a55e85-4dc0-4a1b-946b-71e20d831939",
+      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_4db752cb-c370-43dd-a6ce-ccc74179f36f.git",
+      "name": "tuneit",
+      "alias": "tuneit"
+    }
+  ]
+}
