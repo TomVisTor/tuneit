@@ -1,4 +1,22 @@
 <h2><%= @instrument.name %></h2>
-<%= cl_image_tag @instrument.photo.key, width: 400, height: 300, crop: :fill %>
 
-<!-- <p>Find me in app/views/instruments/show.html.erb</p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-7">
+      <%= cl_image_tag @instrument.photo.key, width: 400, height: 300, crop: :fill, class: 'img-show' %>
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <div class="container-reservation">
+        <div class="table-reservation">
+          <div>
+            Total price
+          </div>
+          <div>
+            <%= @instrument.price_per_day %>€
+          </div>
+        </div>
+        <a href="#" class="button">Réserver</a>
+      </div>
+    </div>
+  </div>
+</div>
