@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'instruments/index'
+  get 'instruments/show'
   get 'users/show'
   get 'users/new'
   get 'users/create'
