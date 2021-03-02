@@ -5,9 +5,22 @@
   border: 0px;
   margin-bottom: 32px;
   background-color: $light-gray;
+  color: $off-black;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
 
   img {
     border-radius: 4px;
     margin-bottom: 16px;
   }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.2);
+    transition: box-shadow 0.2s ease;
+  }
+}
+
+a:hover {
+  text-decoration: none;
 }
