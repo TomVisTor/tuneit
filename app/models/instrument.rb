@@ -1,5 +1,5 @@
 class Instrument < ApplicationRecord
-  FAMILY = ['Vents', 'Cordes', 'Cuivres', 'Bois', 'Percussions']
+  FAMILY = ['Vents', 'Cordes', 'Cuivres', 'Bois', 'Percussions', 'Other']
 
   belongs_to :owner, class_name: "User"
   has_many :reservations
