@@ -1,8 +1,6 @@
 <div class="container text-center">
-  <div class="m-5 p-5">
-    <h2>Bienvenue</h2>
-    <p>Connectez-vous pour découvrir toutes nos fonctionnalités.</p>
-  </div>
+  <h2>Bienvenue</h2>
+  <p>Connectez-vous pour découvrir toutes nos fonctionnalités.</p>
   <div class="row d-flex justify-content-center m-5">
     <div class="col-md-6">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,7 +19,7 @@
 
     <div class="form-actions m-5">
       <button type="submit" class="btn btn-primary">
-        <%= f.button :submit , "SE CONNECTER" %>
+        <%= f.button :submit , "se connecter" %>
       </button>
     </div>
   <% end %>
