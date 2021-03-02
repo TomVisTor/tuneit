@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_135249) do
+ActiveRecord::Schema.define(version: 2021_03_02_143023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_135249) do
     t.bigint "renter_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.bigint "instrument_id"
+    t.index ["instrument_id"], name: "index_reservations_on_instrument_id"
     t.index ["renter_id"], name: "index_reservations_on_renter_id"
   end
 
