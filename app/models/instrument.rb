@@ -8,6 +8,6 @@ class Instrument < ApplicationRecord
 
   validates :name, presence: true
   validates :family, presence: true, inclusion: { in: FAMILY, message: 'Category is not valid' }
-  validates :price, presence: true
+  validates :price_per_day, presence: true
   validates :description, presence: true
 end
