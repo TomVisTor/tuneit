@@ -12,54 +12,133 @@ User.destroy_all
 
 puts "creating users"
 
-miebi = User.create!(email: "mimidu44@gmail.com", password: "123456", username: "mimi", address: "1 rue Lakanal" )
-thomas = User.create!(email: "totodu44@gmail.com", password: "123456", username: "toto", address: "1 rue Lakanal" )
-fx = User.create!(email: "fxdu75@gmail.com", password: "123456", username: "PAPA", address: "1 rue Lakanal" )
-hippo = User.create!(email: "hippodu44@gmail.com", password: "123456", username: "Don Hippo", address: "1 rue Lakanal" )
+miebi = User.new(email: "mimidu44@gmail.com", password: "123456", username: "mimi", address: "1 rue Lakanal" )
+file = File.open(Rails.root.join('db/seeds/users/miebi.jpg'))
+miebi.photo.attach(io: file, filename: 'miebi.jpg', content_type: 'image/jpeg')
+miebi.save!
+
+thomas = User.new(email: "totodu44@gmail.com", password: "123456", username: "toto", address: "1 rue Lakanal" )
+file = File.open(Rails.root.join('db/seeds/users/thomas.jpg'))
+thomas.photo.attach(io: file, filename: 'thomas.jpg', content_type: 'image/jpeg')
+thomas.save!
+
+fx = User.new(email: "fxdu75@gmail.com", password: "123456", username: "PAPA", address: "1 rue Lakanal" )
+file = File.open(Rails.root.join('db/seeds/users/fx.jpg'))
+fx.photo.attach(io: file, filename: 'fx.jpg', content_type: 'image/jpeg')
+fx.save!
+
+hippo = User.new(email: "hippodu44@gmail.com", password: "123456", username: "Don Hippo", address: "1 rue Lakanal" )
+file = File.open(Rails.root.join('db/seeds/users/hippo.png'))
+hippo.photo.attach(io: file, filename: 'hippo.png', content_type: 'image/png')
+hippo.save!
+
 
 puts "creating instruments"
 
-contrebasse = Instrument.create!(owner: miebi, name: "Contrebasse Strunal 1930", family: "Cordes", price_per_day: 15, description: "Très bon état, achetée en 2014.")
+contrebasse = Instrument.new(owner: miebi, name: "Contrebasse Strunal 1930", family: "Cordes", price_per_day: 15, description: "Très bon état, achetée en 2014.")
+file = File.open(Rails.root.join('db/seeds/instruments/Contrebasse.jpg'))
+contrebasse.photo.attach(io: file, filename: 'Contrebasse.jpg', content_type: 'image/jpeg')
+contrebasse.save!
 
-flute_traversiere_1 = Instrument.create!(owner: hippo, name: "flute traversière 1976", family: "Vents", price_per_day: 15, description: "Bon état, achetée en 2016.")
+flute_traversiere_1 = Instrument.new(owner: hippo, name: "flute traversière 1976", family: "Vents", price_per_day: 15, description: "Bon état, achetée en 2016.")
+file = File.open(Rails.root.join('db/seeds/instruments/flutetraversiere1976.jpg'))
+flute_traversiere_1.photo.attach(io: file, filename: 'flutetraversiere1976.jpg', content_type: 'image/jpeg')
+flute_traversiere_1.save!
 
-flute_traversiere_2 = Instrument.create!(owner: fx, name: "flute traversière 1988", family: "Vents", price_per_day: 15, description: "Bon état, achetée en 2010.")
+flute_traversiere_2 = Instrument.new(owner: fx, name: "flute traversière 1988", family: "Vents", price_per_day: 15, description: "Bon état, achetée en 2010.")
+file = File.open(Rails.root.join('db/seeds/instruments/flutetraversière.jpg'))
+flute_traversiere_2.photo.attach(io: file, filename: 'flutetraversière.jpg', content_type: 'image/jpeg')
+flute_traversiere_2.save!
 
-guitare_electrique_1 = Instrument.create!(owner: thomas, name: "Guitare Electrique Lag", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2019.")
+guitare_electrique_1 = Instrument.new(owner: thomas, name: "Guitare Electrique Lag", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2019.")
+file = File.open(Rails.root.join('db/seeds/instruments/GuitareelectriqueLag.jpg'))
+guitare_electrique_1.photo.attach(io: file, filename: 'GuitareelectriqueLag.jpg', content_type: 'image/jpeg')
+guitare_electrique_1.save!
 
-guitare_electrique_2 = Instrument.create!(owner: thomas, name: "Guitare Electrique Classique", family: "Cordes", price_per_day: 10, description: "Etat correct, achetée en 2008.")
+guitare_electrique_2 = Instrument.new(owner: thomas, name: "Guitare Electrique Classique", family: "Cordes", price_per_day: 10, description: "Etat correct, achetée en 2008.")
+file = File.open(Rails.root.join('db/seeds/instruments/GuitareelectriqueLag.jpg'))
+guitare_electrique_2.photo.attach(io: file, filename: 'GuitareelectriqueLag.jpg', content_type: 'image/jpeg')
+guitare_electrique_2.save!
 
-guitare_acoustique = Instrument.create!(owner: thomas, name: "Guitare Acoustique Classique", family: "Cordes", price_per_day: 10, description: "Etat correct, achetée en 2004.")
+guitare_acoustique = Instrument.new(owner: thomas, name: "Guitare Acoustique Classique", family: "Cordes", price_per_day: 10, description: "Etat correct, achetée en 2004.")
+file = File.open(Rails.root.join('db/seeds/instruments/GuitareAcoustique.jpg'))
+guitare_acoustique.photo.attach(io: file, filename: 'GuitareAcoustique.jpg', content_type: 'image/jpeg')
+guitare_acoustique.save!
 
-harpe = Instrument.create!(owner: thomas, name: "Harpe de concert", family: "Cordes", price_per_day: 25, description: "Très bon état, achetée en 2020")
+harpe = Instrument.new(owner: thomas, name: "Harpe de concert", family: "Cordes", price_per_day: 25, description: "Très bon état, achetée en 2020")
+file = File.open(Rails.root.join('db/seeds/instruments/Harpe.jpg'))
+harpe.photo.attach(io: file, filename: 'Harpe.jpg', content_type: 'image/jpeg')
+harpe.save!
 
-hautbois = Instrument.create!(owner: thomas, name: "Hautbois", family: "Vents", price_per_day: 16, description: "Très bon état, achetée en 2019")
+hautbois = Instrument.new(owner: thomas, name: "Hautbois", family: "Vents", price_per_day: 16, description: "Très bon état, achetée en 2019")
+file = File.open(Rails.root.join('db/seeds/instruments/hautbois.jpg'))
+hautbois.photo.attach(io: file, filename: 'hautbois.jpg', content_type: 'image/jpeg')
+hautbois.save!
 
-violon_1 = Instrument.create!(owner: thomas, name: "Kamânche Violon iranien", family: "Cordes", price_per_day: 25, description: "Très bon état, achetée en 1988")
+violon_1 = Instrument.new(owner: thomas, name: "Kamânche Violon iranien", family: "Cordes", price_per_day: 25, description: "Très bon état, achetée en 1988")
+file = File.open(Rails.root.join('db/seeds/instruments/Violon1.png'))
+violon_1.photo.attach(io: file, filename: 'Violon1.png', content_type: 'image/png')
+violon_1.save!
 
-mandoline = Instrument.create!(owner: miebi, name: "Mandoline", family: "Cordes", price_per_day: 10, description: "bon état, achetée en 1789")
+mandoline = Instrument.new(owner: miebi, name: "Mandoline", family: "Cordes", price_per_day: 10, description: "bon état, achetée en 1789")
+file = File.open(Rails.root.join('db/seeds/instruments/Mandoline.jpg'))
+mandoline.photo.attach(io: file, filename: 'Mandoline.jpg', content_type: 'image/jpeg')
+mandoline.save!
 
-ocarina_focalink = Instrument.create!(owner: miebi, name: "Ocarina Focalink", family: "Vents", price_per_day: 5, description: "Très bon état, achetée en 2017")
+ocarina_focalink = Instrument.new(owner: miebi, name: "Ocarina Focalink", family: "Vents", price_per_day: 5, description: "Très bon état, achetée en 2017")
+file = File.open(Rails.root.join('db/seeds/instruments/OcarinaFocalink.jpg'))
+ocarina_focalink.photo.attach(io: file, filename: 'OcarinaFocalink.jpg', content_type: 'image/jpeg')
+ocarina_focalink.save!
 
-piano_1 = Instrument.create!(owner: miebi, name: "Piano 1-4 de queue", family: "Cordes", price_per_day: 50, description: "Très bon état, achetée en 2008")
+piano_1 = Instrument.new(owner: miebi, name: "Piano 1-4 de queue", family: "Cordes", price_per_day: 50, description: "Très bon état, achetée en 2008")
+file = File.open(Rails.root.join('db/seeds/instruments/Piano1.jpg'))
+piano_1.photo.attach(io: file, filename: 'Piano1.jpg', content_type: 'image/jpeg')
+piano_1.save!
 
-piano_2 = Instrument.create!(owner: hippo, name: "Piano 1-4 de queue", family: "Cordes", price_per_day: 50, description: "Très bon état, achetée en 2009")
+piano_2 = Instrument.new(owner: hippo, name: "Piano 1-4 de queue", family: "Cordes", price_per_day: 50, description: "Très bon état, achetée en 2009")
+file = File.open(Rails.root.join('db/seeds/instruments/Piano2.jpg'))
+piano_2.photo.attach(io: file, filename: 'Piano2.jpg', content_type: 'image/jpeg')
+piano_2.save!
 
-saxophone_1 = Instrument.create!(owner: hippo, name: "Saxophone Jimmy Sax", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 2011.")
+saxophone_1 = Instrument.new(owner: hippo, name: "Saxophone Jimmy Sax", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 2011.")
+file = File.open(Rails.root.join('db/seeds/instruments/saxophone _1.jpg'))
+saxophone_1.photo.attach(io: file, filename: 'saxophone _1.jpg', content_type: 'image/jpeg')
+saxophone_1.save!
 
-saxophone_2 = Instrument.create!(owner: hippo, name: "Saxophone Alto", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 1999.")
+saxophone_2 = Instrument.new(owner: hippo, name: "Saxophone Alto", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 1999.")
+file = File.open(Rails.root.join('db/seeds/instruments/saxophone_2.jpg'))
+saxophone_2.photo.attach(io: file, filename: 'saxophone_2.jpg', content_type: 'image/jpeg')
+saxophone_2.save!
 
-saxophone_3 = Instrument.create!(owner: fx, name: "Saxophone Ténor", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 1983.")
+saxophone_3 = Instrument.new(owner: fx, name: "Saxophone Ténor", family: "Cuivres", price_per_day: 20, description: "Bon état, achetée en 1983.")
+file = File.open(Rails.root.join('db/seeds/instruments/saxophone_3.jpg'))
+saxophone_3.photo.attach(io: file, filename: 'saxophone_3.jpg', content_type: 'image/jpeg')
+saxophone_3.save!
 
-trombone_a_coulisse = Instrument.create!(owner: fx, name: "Trombone à coulisse", family: "Cuivres", price_per_day: 20, description: "Très bon état, achetée en 2000.")
+trombone_a_coulisse = Instrument.new(owner: fx, name: "Trombone à coulisse", family: "Cuivres", price_per_day: 20, description: "Très bon état, achetée en 2000.")
+file = File.open(Rails.root.join('db/seeds/instruments/Trombone.jpg'))
+trombone_a_coulisse.photo.attach(io: file, filename: 'Trombone.jpg', content_type: 'image/jpeg')
+trombone_a_coulisse.save!
 
-trompette = Instrument.create!(owner: fx, name: "Trompette", family: "Cuivres", price_per_day: 15, description: "Bon état, achetée en 2004.")
+trompette = Instrument.new(owner: fx, name: "Trompette", family: "Cuivres", price_per_day: 15, description: "Bon état, achetée en 2004.")
+file = File.open(Rails.root.join('db/seeds/instruments/Trompette.jpg'))
+trompette.photo.attach(io: file, filename: 'Trompette.jpg', content_type: 'image/jpeg')
+trompette.save!
 
-tuba = Instrument.create!(owner: miebi, name: "Tuba", family: "Cuivres", price_per_day: 20, description: "Très bon état, achetée en 2006.")
+tuba = Instrument.new(owner: miebi, name: "Tuba", family: "Cuivres", price_per_day: 20, description: "Très bon état, achetée en 2006.")
+file = File.open(Rails.root.join('db/seeds/instruments/Tuba.jpg'))
+tuba.photo.attach(io: file, filename: 'Tuba.jpg', content_type: 'image/jpeg')
+tuba.save!
 
-violon_2 = Instrument.create!(owner: thomas, name: "Violon 1900", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2014.")
+violon_2 = Instrument.new(owner: thomas, name: "Violon 1900", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2014.")
+file = File.open(Rails.root.join('db/seeds/instruments/Violon_2.png'))
+violon_2.photo.attach(io: file, filename: 'Violon_2.png', content_type: 'image/png')
+violon_2.save!
 
-violon_3 = Instrument.create!(owner: hippo, name: "Violon Violon Charles Bailly 1924", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2021.")
+violon_3 = Instrument.new(owner: hippo, name: "Violon Violon Charles Bailly 1924", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2021.")
+file = File.open(Rails.root.join('db/seeds/instruments/Violon_3.jpg'))
+violon_3.photo.attach(io: file, filename: 'Violon_3.jpg', content_type: 'image/jpeg')
+violon_3.save!
 
 puts "creating reservations"
 
