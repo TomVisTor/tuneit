@@ -1,2 +1,4 @@
-<h1>Instruments#show</h1>
-<p>Find me in app/views/instruments/show.html.erb</p>
+<h2><%= @instrument.name %></h2>
+<%= cl_image_tag @instrument.photo.key, width: 400, height: 300, crop: :fill %>
+
+<!-- <p>Find me in app/views/instruments/show.html.erb</p> -->
