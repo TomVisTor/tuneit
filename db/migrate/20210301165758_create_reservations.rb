@@ -4,6 +4,7 @@ class CreateReservations < ActiveRecord::Migration[6.0]
       t.integer :total_price
       t.date :start_date
       t.date :end_date
+      t.references :renter, foreign_key: { to_table: :users }
 
       t.timestamps
     end
