@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :received_reservations, through: :instruments, source: :reservations
   # As renter
   has_many :reservations, foreign_key: :renter_id
+  # Photo
+  has_one_attached :photo
 end
