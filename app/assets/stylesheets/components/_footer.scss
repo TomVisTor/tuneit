@@ -5,3 +5,11 @@ footer {
   display: flex;
   align-items: center;
 }
+
+// For shorter pages, footer needs to stick to the bottom
+.flex-wrapper {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+}
