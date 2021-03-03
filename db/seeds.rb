@@ -12,22 +12,22 @@ User.destroy_all
 
 puts "creating users"
 
-miebi = User.new(email: "mimidu44@gmail.com", password: "123456", username: "mimi", address: "1 rue Lakanal" )
+miebi = User.new(email: "mimidu44@gmail.com", password: "123456", username: "mimi", address: "Nantes" )
 file = File.open(Rails.root.join('db/seeds/users/miebi.jpg'))
 miebi.photo.attach(io: file, filename: 'miebi.jpg', content_type: 'image/jpeg')
 miebi.save!
 
-thomas = User.new(email: "totodu44@gmail.com", password: "123456", username: "toto", address: "1 rue Lakanal" )
+thomas = User.new(email: "totodu44@gmail.com", password: "123456", username: "toto", address: "Ancenis" )
 file = File.open(Rails.root.join('db/seeds/users/thomas.jpg'))
 thomas.photo.attach(io: file, filename: 'thomas.jpg', content_type: 'image/jpeg')
 thomas.save!
 
-fx = User.new(email: "fxdu75@gmail.com", password: "123456", username: "PAPA", address: "1 rue Lakanal" )
+fx = User.new(email: "fxdu75@gmail.com", password: "123456", username: "PAPA", address: "Les Herbiers" )
 file = File.open(Rails.root.join('db/seeds/users/fx.jpg'))
 fx.photo.attach(io: file, filename: 'fx.jpg', content_type: 'image/jpeg')
 fx.save!
 
-hippo = User.new(email: "hippodu44@gmail.com", password: "123456", username: "Don Hippo", address: "1 rue Lakanal" )
+hippo = User.new(email: "hippodu44@gmail.com", password: "123456", username: "Don Hippo", address: "Cholet" )
 file = File.open(Rails.root.join('db/seeds/users/hippo.png'))
 hippo.photo.attach(io: file, filename: 'hippo.png', content_type: 'image/png')
 hippo.save!
