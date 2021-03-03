@@ -26,13 +26,11 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
+        <div class="container-btn">
+            <%= f.button :submit, "créer un compte", class: "button"  %>
+        </div>
+      <% end %>
     </div>
   </div>
 
-  <div class="form-actions m-5">
-    <button type="submit" class="btn btn-primary">
-      <%= f.button :submit, "créer un compte" %>
-    </button>
-  </div>
-  <% end %>
 </div>

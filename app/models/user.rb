@@ -11,4 +11,6 @@ class User < ApplicationRecord
   has_many :reservations, foreign_key: :renter_id
   # Photo
   has_one_attached :photo
+
+  # validates :photo, presence: true
 end
