@@ -12,16 +12,20 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+    <div class="flex-wrapper">
+      <div>
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
 
-   <footer>
-    <div class="container">
-     <p>© 2021 Made at Le Wagon</p>
+      <footer>
+        <div class="container">
+          <p>© 2021 Made at Le Wagon</p>
+        </div>
+      </footer>
     </div>
-   </footer>
   </body>
 </html>
