@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :owner do
+    get 'instruments/index'
+    get 'instruments/new'
+    get 'instruments/create'
+    get 'instruments/destroy'
+  end
   get 'instruments/index'
   get 'instruments/show'
   get 'users/show'
