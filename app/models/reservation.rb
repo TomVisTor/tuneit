@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-  STATUSES = ["pending", "accepted", "declined"]
+  STATUSES = ["Pending", "Accepted", "Declined", "Cancelled"]
   belongs_to :renter, class_name: "User"
   belongs_to :instrument
 
