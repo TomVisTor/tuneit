@@ -13,7 +13,7 @@ class ReservationsController < ApplicationController
     @reservation.total_price =  number_of_days * @reservation.instrument.price_per_day
     @reservation.status = "Pending"
     if @reservation.save!
-      redirect_to instruments_path
+      redirect_to reservations_path
     else
       render instrument_path(params[:instrument_id])
     end
