@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   def index
+    @reservations = Reservation.all.where(renter: current_user)
   end
 
   def create
@@ -10,13 +11,20 @@ class ReservationsController < ApplicationController
     @reservation.renter = current_user
     number_of_days = @reservation.end_date - @reservation.start_date
     @reservation.total_price =  number_of_days * @reservation.instrument.price_per_day
-    @reservation.status = "pending"
+    @reservation.status = "Pending"
     if @reservation.save!
       redirect_to instruments_path
     else
       render instrument_path(params[:instrument_id])
     end
   end
+
+  # def update
+  #   @reservation.status = "Cancelled"
+  #   if @reservation.update(reservation_params)
+  #     redirect_to reservations_path, notice: 'Reservation was successfully updated.'
+  #   end
+  # end
 
 
   private
