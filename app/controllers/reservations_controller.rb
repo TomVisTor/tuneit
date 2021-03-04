@@ -12,10 +12,11 @@ class ReservationsController < ApplicationController
     @number_of_days = @reservation.end_date - @reservation.start_date
     @reservation.total_price =  @number_of_days * @reservation.instrument.price_per_day
     @reservation.status = "Pending"
-    if @reservation.save!
+    if @reservation.save
       redirect_to reservations_path
     else
-      render instrument_path(params[:instrument_id])
+      flash[:alert] = @reservation.errors.full_messages.join "\n"
+      render "instruments/show"
     end
   end
 
