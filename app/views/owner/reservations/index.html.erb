@@ -14,22 +14,63 @@
 	</ul>
 
 	<h3>Demandes en attente</h3>
+ 	<div class="row">
+		<% @instruments.each do |instrument| %>
+			<div class=cards-owner-reservations>
+				<% instrument.reservations.each do |reservation| %>
+					<%# <% if reservation.status == "Pending" %>
+						<div class="card-reservation">
+							<%= cl_image_tag reservation.instrument.photo.key %>
+							<div class="card-reservation-infos">
+								<h3><%= reservation.instrument.name %></h3>
+								<h5><%= reservation.total_price %>€</h5>
+								<p>Du: <%= reservation.start_date %></p>
+								<p>Au: <%= reservation.end_date %></p>
+								<div class="btn-reservations">
+									<%= link_to "Refuser", decline_owner_reservation_path(reservation), method: :patch, class: "btn btn-decline" %>
+									<%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class: "btn btn-accept" %>
+								</div>
+							</div>
+						</div>
+					<%# <% end %> 
+	
+					<% if reservation.status == "Pending" %>
+						<div class="col-sm-12 col-md-4">
+							<div class="card">
+								<%= cl_image_tag reservation.instrument.photo.key %>
+								<h3><%= reservation.status %></h3>
+								<h3><%= reservation.instrument.name %></h3>
+								<h5><%= reservation.renter.username %></h5>
+								<h5>Prix total: <%= reservation.total_price %>€</h5>
+								<%= link_to "Accept", accept_owner_reservation_path(reservation), method: :patch %>
+								<%= link_to "Decline", decline_owner_reservation_path(reservation), method: :patch %>
+							</div>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+				
+
+
+
 
 	<div class="row">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Pending" %>
-				      <div class="col-sm-12 col-md-4">
-				        <div class="card">
-				          <%= cl_image_tag reservation.instrument.photo.key %>
-				          <h3><%= reservation.status %></h3>
-				          <h3><%= reservation.instrument.name %></h3>
-				          <h5><%= reservation.renter.username %></h5>
-				          <h5>Prix total: <%= reservation.total_price %>€</h5>
-				          <%= link_to "Accept", accept_owner_reservation_path(reservation), method: :patch %>
-				          <%= link_to "Decline", decline_owner_reservation_path(reservation), method: :patch %>
-				        </div>
-				      </div>
+					<div class="col-sm-12 col-md-4">
+						<div class="card">
+							<%= cl_image_tag reservation.instrument.photo.key %>
+							<h3><%= reservation.status %></h3>
+							<h3><%= reservation.instrument.name %></h3>
+							<h5><%= reservation.renter.username %></h5>
+							<h5>Prix total: <%= reservation.total_price %>€</h5>
+							<%= link_to "Accept", accept_owner_reservation_path(reservation), method: :patch %>
+							<%= link_to "Decline", decline_owner_reservation_path(reservation), method: :patch %>
+						</div>
+					</div>
 				<% end %>
 			<% end %>
 		<% end %>
