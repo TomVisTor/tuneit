@@ -1,2 +1,9 @@
-<h2>Owner::Instruments#new</h2>
-<p>Find me in app/views/owner/instruments/new.html.erb</p>
+<div class="container">
+	<h2>Ajouter un nouvel isntrument</h2>
+
+	<%= simple_form_for([:owner, @instrument]) do |f| %>
+		<%= f.input :name %>
+		<%= f.select :family, Instrument::FAMILY %>
+		<%= f.submit %>
+	<% end %>
+</div>

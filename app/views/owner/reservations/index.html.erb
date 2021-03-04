@@ -1,19 +1,64 @@
 <div class="container">
 	<h2>Espace propriétaire</h2>
 
-	<h3>Demandes de réservation en attente</h3>
+	<h3>Demandes en attente</h3>
 
 	<div class="row">
-		<% @reservations.each do |reservation| %>
-			<% if reservation.instrument.owner == current_user && reservation.status == "Pending" %>
-			      <div class="col-sm-12 col-md-4">
-			        <div class="card">
-			          <%= cl_image_tag reservation.instrument.photo.key %>
-			          <h3><%= reservation.instrument.name %></h3>
-			          <h5><%= reservation.renter.username %></h5>
-			          <h5>Prix total: <%= reservation.total_price %>€</h5>
-			        </div>
-			      </div>
+		<% @instruments.each do |instrument| %>
+			<% instrument.reservations.each do |reservation| %>
+				<% if reservation.status == "Pending" %>
+				      <div class="col-sm-12 col-md-4">
+				        <div class="card">
+				          <%= cl_image_tag reservation.instrument.photo.key %>
+				          <h3><%= reservation.status %></h3>
+				          <h3><%= reservation.instrument.name %></h3>
+				          <h5><%= reservation.renter.username %></h5>
+				          <h5>Prix total: <%= reservation.total_price %>€</h5>
+				          <%= link_to "Accept", accept_owner_reservation_path(reservation), method: :patch %>
+				          <%= link_to "Decline", decline_owner_reservation_path(reservation), method: :patch %>
+				        </div>
+				      </div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+
+	<h3>Demandes acceptées</h3>
+
+	<div class="row">
+		<% @instruments.each do |instrument| %>
+			<% instrument.reservations.each do |reservation| %>
+				<% if reservation.status == "Accepted" %>
+				      <div class="col-sm-12 col-md-4">
+				        <div class="card">
+				          <%= cl_image_tag reservation.instrument.photo.key %>
+				          <h3><%= reservation.status %></h3>
+				          <h3><%= reservation.instrument.name %></h3>
+				          <h5><%= reservation.renter.username %></h5>
+				          <h5>Prix total: <%= reservation.total_price %>€</h5>
+				        </div>
+				      </div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+
+	<h3>Demandes refusées</h3>
+
+	<div class="row">
+		<% @instruments.each do |instrument| %>
+			<% instrument.reservations.each do |reservation| %>
+				<% if reservation.status == "Declined" %>
+				      <div class="col-sm-12 col-md-4">
+				        <div class="card">
+				          <%= cl_image_tag reservation.instrument.photo.key %>
+				          <h3><%= reservation.status %></h3>
+				          <h3><%= reservation.instrument.name %></h3>
+				          <h5><%= reservation.renter.username %></h5>
+				          <h5>Prix total: <%= reservation.total_price %>€</h5>
+				        </div>
+				      </div>
+				<% end %>
 			<% end %>
 		<% end %>
 	</div>
