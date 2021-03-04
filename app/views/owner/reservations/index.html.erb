@@ -1,21 +1,9 @@
 <div class="container">
 	<h2>Espace propriétaire</h2>
 
-	<ul class="list-inline tabs-underlined">
-	  <li>
-	    <a href="#" class="tab-underlined active">Bookings</a>
-	  </li>
-	  <li>
-	    <a href="#" class="tab-underlined">Requests</a>
-	  </li>
-	  <li>
-	    <a href="#" class="tab-underlined">Conversations</a>
-	  </li>
-	</ul>
-
 	<h3>Demandes en attente</h3>
 
-	<div class="row">
+	<div class="row row-reservation" id="pending">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Pending" %>
@@ -37,7 +25,7 @@
 
 	<h3>Demandes acceptées</h3>
 
-	<div class="row">
+	<div class="row row-reservation" id="accepted">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Accepted" %>
@@ -57,7 +45,7 @@
 
 	<h3>Demandes refusées</h3>
 
-	<div class="row">
+	<div class="row row-reservation" id="refused">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Declined" %>
