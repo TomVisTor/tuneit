@@ -29,6 +29,10 @@
 	padding: 0.25rem 1.5rem;
 }
 
+.white {
+  color: white !important ;
+}
+
 hr {
   border-top: solid 1px $secondary;
   opacity: 0.5;
@@ -42,8 +46,8 @@ hr {
 .icon-loupe {
   background: rgba(0,0,0,0);
   position: absolute;
-  right: 90px;
-  top: 20px;
+  right: 14px;
+  top: 8px;
   color: white;
 }
 
@@ -52,10 +56,16 @@ hr {
   font-family: "GT Flexa Mono Beta v7";
   border: solid 1px white;
   background-color: rgba(0,0,0,0);
+  color: white !important ;
 
   &:focus {
-    background-color: rgba(0,0,0,0);  
+    background-color: rgba(0,0,0,0);
+    color: white;
+    box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
+    outline: none !important;
+    border: solid 1px white;
   }
+
 }
 
 .form-control::placeholder {
@@ -67,4 +77,5 @@ hr {
 .search-bar {
   margin-left: auto;
   margin-right: 20px;
+  position: relative;
 }
