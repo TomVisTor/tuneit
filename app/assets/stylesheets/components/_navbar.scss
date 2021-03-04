@@ -8,6 +8,11 @@
   transition: 0.2s ease;
 }
 
+.avatar:hover {
+  box-shadow: 3px 3px 13px white;
+  cursor: pointer;
+}
+
 .navbar-background {
   background-color: $secondary;
   box-shadow: 3px 3px 14px rgba(210,179,161,0.1);
@@ -27,6 +32,15 @@
   color: $secondary;
 	font-size: 12px;
 	padding: 0.25rem 1.5rem;
+}
+
+.nav-link {
+  font-family: "GT Flexa Mono Beta v7";
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .white {
