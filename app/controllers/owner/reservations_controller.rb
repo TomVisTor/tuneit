@@ -2,20 +2,21 @@ class Owner::ReservationsController < ApplicationController
 	before_action :set_parameters, only: [:accept, :decline]
 
 	def index
-		# @reservations = Reservation.all
 		@instruments = Instrument.where(owner: current_user)
-		@reservations = []
-		@instruments.each do |instrument|
-			@reservations << instrument.reservations
-		end
 	end
 
 	def accept
-		# redirect_to reservations_path
+		@reservation.status = "Accepted"
+		if @reservation.save!
+			redirect_to owner_reservations_path
+		end
 	end
 
 	def decline
-
+		@reservation.status = "Declined"
+		if @reservation.save!
+			redirect_to owner_reservations_path
+		end
 	end
 
 	private
