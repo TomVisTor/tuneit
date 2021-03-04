@@ -16,11 +16,10 @@
 
   &:hover {
     text-decoration: none;
-    box-shadow: 4px 4px 14px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.3);
     transition: box-shadow 0.2s ease;
   }
 }
-
 
 .card-body {
   padding: 0;
@@ -28,4 +27,13 @@
 
 a:hover {
   text-decoration: none;
+}
+
+.card-columns .card {
+  margin-bottom: 32px;
+}
+
+.card-columns {
+  margin-top: 72px;
+  column-gap: 32px;
 }
