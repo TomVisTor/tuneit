@@ -3,7 +3,10 @@
 
 	<%= simple_form_for([:owner, @instrument]) do |f| %>
 		<%= f.input :name %>
+		<%= f.input :price_per_day %>
+		<%= f.input :description %>
 		<%= f.select :family, Instrument::FAMILY %>
-		<%= f.submit %>
+  		<%= f.input :photo, as: :file %>
+  		<%= f.submit %>
 	<% end %>
 </div>

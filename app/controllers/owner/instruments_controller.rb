@@ -24,6 +24,6 @@ class Owner::InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :family, :availability, :description, :photo, :price_per_day, :owner_id)
+    params.require(:instrument).permit(:name, :family, :availability, :description, :photo, :price_per_day)
   end
 end
