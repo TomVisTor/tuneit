@@ -1,8 +1,19 @@
 class InstrumentsController < ApplicationController
   before_action :set_instrument, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @instruments = Instrument.all
+    if params[:query].present?
+      # Plain ActiveRecord
+      sql_query = <<~SQL
+        instruments.name @@ :query
+        OR instruments.family @@ :query
+        OR users.address @@ :query
+      SQL
+      @instruments = Instrument.joins(:owner).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @instruments = Instrument.all
+    end
   end
 
   def show
