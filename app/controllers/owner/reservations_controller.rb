@@ -2,8 +2,12 @@ class Owner::ReservationsController < ApplicationController
 	before_action :set_parameters, only: [:accept, :decline]
 
 	def index
-		@reservations = Reservation.all
-		# @reservation = Reservation.new
+		# @reservations = Reservation.all
+		@instruments = Instrument.where(owner: current_user)
+		@reservations = []
+		@instruments.each do |instrument|
+			@reservations << instrument.reservations
+		end
 	end
 
 	def accept
