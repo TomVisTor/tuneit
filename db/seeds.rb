@@ -142,18 +142,18 @@ violon_3.save!
 
 puts "creating reservations"
 
-Reservation.create!(instrument: contrebasse, renter: thomas, start_date: "2021-03-01", end_date: "2021-03-02", status: "declined", total_price: 15)
-Reservation.create!(instrument: tuba, renter: miebi, start_date: "2021-01-02", end_date: "2021-01-04", status: "accepted", total_price: 40)
-Reservation.create!(instrument: trombone_a_coulisse, renter: fx, start_date: "2020-08-02", end_date: "2020-08-06", status: "pending", total_price: 80)
-Reservation.create!(instrument: saxophone_2, renter: hippo, start_date: "2020-12-14", end_date: "2020-12-24", status: "accepted", total_price: 200)
-Reservation.create!(instrument: saxophone_3, renter: thomas, start_date: "2021-03-19", end_date: "2021-03-23", status: "accepted", total_price: 80)
-Reservation.create!(instrument: piano_1, renter: miebi, start_date: "2021-01-10", end_date: "2021-01-18", status: "pending", total_price: 400)
-Reservation.create!(instrument: piano_2, renter: fx, start_date: "2020-08-15", end_date: "2020-08-20", status: "declined", total_price: 250)
-Reservation.create!(instrument: hautbois, renter: hippo, start_date: "2020-12-07", end_date: "2020-12-10", status: "pending", total_price: 48)
-Reservation.create!(instrument: violon_1, renter: thomas, start_date: "2021-04-01", end_date: "2021-04-02", status: "pending", total_price: 25)
-Reservation.create!(instrument: violon_2, renter: miebi, start_date: "2021-05-02", end_date: "2021-05-04", status: "declined", total_price: 40)
-Reservation.create!(instrument: mandoline, renter: fx, start_date: "2020-04-02", end_date: "2020-04-06", status: "accepted", total_price: 40)
-Reservation.create!(instrument: guitare_electrique_1, renter: hippo, start_date: "2020-11-14", end_date: "2020-11-24", status: "declined", total_price: 200)
+Reservation.create!(instrument: contrebasse, renter: thomas, start_date: "2021-03-01", end_date: "2021-03-02", status: "Declined", total_price: 15)
+Reservation.create!(instrument: tuba, renter: miebi, start_date: "2021-01-02", end_date: "2021-01-04", status: "Accepted", total_price: 40)
+Reservation.create!(instrument: trombone_a_coulisse, renter: fx, start_date: "2020-08-02", end_date: "2020-08-06", status: "Pending", total_price: 80)
+Reservation.create!(instrument: saxophone_2, renter: hippo, start_date: "2020-12-14", end_date: "2020-12-24", status: "Accepted", total_price: 200)
+Reservation.create!(instrument: saxophone_3, renter: thomas, start_date: "2021-03-19", end_date: "2021-03-23", status: "Accepted", total_price: 80)
+Reservation.create!(instrument: piano_1, renter: miebi, start_date: "2021-01-10", end_date: "2021-01-18", status: "Pending", total_price: 400)
+Reservation.create!(instrument: piano_2, renter: fx, start_date: "2020-08-15", end_date: "2020-08-20", status: "Declined", total_price: 250)
+Reservation.create!(instrument: hautbois, renter: hippo, start_date: "2020-12-07", end_date: "2020-12-10", status: "Pending", total_price: 48)
+Reservation.create!(instrument: violon_1, renter: thomas, start_date: "2021-04-01", end_date: "2021-04-02", status: "Pending", total_price: 25)
+Reservation.create!(instrument: violon_2, renter: miebi, start_date: "2021-05-02", end_date: "2021-05-04", status: "Declined", total_price: 40)
+Reservation.create!(instrument: mandoline, renter: fx, start_date: "2020-04-02", end_date: "2020-04-06", status: "Accepted", total_price: 40)
+Reservation.create!(instrument: guitare_electrique_1, renter: hippo, start_date: "2020-11-14", end_date: "2020-11-24", status: "Declined", total_price: 200)
 
 puts "finish"
 
