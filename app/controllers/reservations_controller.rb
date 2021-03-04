@@ -5,7 +5,6 @@ class ReservationsController < ApplicationController
 
   def create
     @instrument = Instrument.find(params[:instrument_id])
-    # raise
     @reservation = Reservation.new(reservation_params)
     @reservation.instrument = @instrument
     @reservation.renter = current_user
@@ -18,14 +17,6 @@ class ReservationsController < ApplicationController
       render instrument_path(params[:instrument_id])
     end
   end
-
-  # def update
-  #   @reservation.status = "Cancelled"
-  #   if @reservation.update(reservation_params)
-  #     redirect_to reservations_path, notice: 'Reservation was successfully updated.'
-  #   end
-  # end
-
 
   private
 

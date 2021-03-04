@@ -19,6 +19,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :instruments, only: [ :index, :new, :create ]
+    resources :instruments, only: [ :index, :new, :create, :destroy ]
   end
 end

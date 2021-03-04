@@ -3,6 +3,7 @@ class Owner::ReservationsController < ApplicationController
 
 	def index
 		@instruments = Instrument.where(owner: current_user)
+		@owner = current_user
 	end
 
 	def accept
