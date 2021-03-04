@@ -13,3 +13,43 @@
 .navbar-lewagon .navbar-brand img {
   width: 50px;
 }
+
+.nav-section-title {
+	// font-family: "GT Flexa Mono Beta v7";
+	// color: rgba(0,0,0,0.5);
+  color: $secondary;
+	font-size: 12px;
+	padding: 0.25rem 1.5rem;
+}
+
+hr {
+  border-top: solid 1px $secondary;
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  padding: 1rem 0;
+  opacity: 0.98;
+}
+
+.icon-loupe {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  right: 80px;
+  top: 20px;
+}
+
+.form-control {
+  border-radius: 25px;
+  font-family: "GT Flexa Mono Beta v7";
+}
+
+.form-control::placeholder {
+  color: rgba(0,0,0,0.7);
+  font-size: 14px;
+}
+
+.search-bar {
+  margin-left: auto;
+  margin-right: 20px;
+}
