@@ -14,6 +14,7 @@ class InstrumentsController < ApplicationController
     else
       @instruments = Instrument.all
     end
+    @instruments = @instruments.where.not(owner: current_user)
   end
 
   def show
