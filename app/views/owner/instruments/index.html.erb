@@ -6,23 +6,21 @@
 	<% end %>
 
   <div class="card-columns">
-	<% @instruments.each do |instrument| %>
-      	<div class="card">
-		        <%# <div class="card card-owner-instrument"> %>
-		          <%= cl_image_tag instrument.photo.key, class: "card-img-top" %>
-				          <div class="card-body">
-		          <h3 class="card-title"><%= instrument.name %></h3>
-		          <h3 class="card-text"><%= instrument.price_per_day %>€</h3>
-		          <p class="card-text"><%= instrument.description %></p>
-				  <div class="text-center">
-							<%= link_to "Modifier", edit_owner_instrument_path(instrument), class:"button mb-3 modifier" %>
-							<%= link_to "Supprimer",
-							instrument_path(instrument), class: "supprimer",
-							method: :delete,
-							data: { confirm: "Are you sure?" } %>
-				  </div>
-		        </div>
-		    </div>
+		<% @instruments.each do |instrument| %>
+      <div class="card">
+				<%= cl_image_tag instrument.photo.key, class: "card-img-top" %>
+				<div class="card-body">
+					<h3 class="card-title"><%= instrument.name %></h3>
+					<h3 class="card-text"><%= instrument.price_per_day %>€</h3>
+					<p class="card-text"><%= instrument.description %></p>
+					<div class="text-center">
+						<%= link_to "Modifier", edit_owner_instrument_path(instrument), class:"button mb-3 modifier" %>
+						<%= link_to "Supprimer",
+						owner_instrument_path(instrument), class: "supprimer",
+						method: :delete %>
+					</div>
+				</div>
+			</div>
 		<% end %>
 	</div>
 </div>
