@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container container-owner-reservations">
 	<h2>Espace propriétaire</h2>
 
 	<h3>Demandes en attente</h3>
@@ -26,6 +26,8 @@
 		<% end %>
 	</div>
 
+	<hr class="hr-owner-reservations">
+
 	<h3>Demandes acceptées</h3>
  	<div class="row reservation-section">
 		<% @instruments.each do |instrument| %>
@@ -46,6 +48,8 @@
 			<% end %>
 		<% end %>
 	</div>
+
+	<hr class="hr-owner-reservations">
 
 	<h3>Demandes refusées</h3>
  	<div class="row reservation-section">
