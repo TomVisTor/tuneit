@@ -6,6 +6,35 @@
   z-index: 10;
   margin-bottom: -65px;
   transition: 0.2s ease;
+  
+  .form-control::placeholder {
+    // color: white;
+    color: white;
+    font-size: 14px;
+  }
+
+  .search-bar {
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .form-control {
+    border-radius: 25px;
+    font-family: "GT Flexa Mono Beta v7";
+    border: solid 1px white;
+    background-color: rgba(0,0,0,0);
+    color: white !important ;
+
+    &:focus {
+      background-color: rgba(0,0,0,0);
+      color: white;
+      box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
+      outline: none !important;
+      border: solid 1px white;
+    }
+
+  }
 }
 
 .avatar:hover {
@@ -63,33 +92,4 @@ hr {
   right: 14px;
   top: 8px;
   color: white;
-}
-
-.form-control {
-  border-radius: 25px;
-  font-family: "GT Flexa Mono Beta v7";
-  border: solid 1px white;
-  background-color: rgba(0,0,0,0);
-  color: white !important ;
-
-  &:focus {
-    background-color: rgba(0,0,0,0);
-    color: white;
-    box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
-    outline: none !important;
-    border: solid 1px white;
-  }
-
-}
-
-.form-control::placeholder {
-  // color: white;
-  color: white;
-  font-size: 14px;
-}
-
-.search-bar {
-  margin-left: auto;
-  margin-right: 20px;
-  position: relative;
 }

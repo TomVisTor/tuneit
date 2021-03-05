@@ -11,7 +11,34 @@
   // justify-content: space-between;
 }
 
+.container-show {
+  margin-top: 102px;
+}
+
 .table-reservation {
   display: flex;
   justify-content: space-between;
+}
+
+.owner-infos {
+  display: inline;
+}
+
+.owner-address {
+  color: rgba(0,0,0,0.5)
+}
+
+.family {
+  background-color: $secondary;
+  border-radius: 4px;
+  padding: 0 7px;
+}
+
+.link-retour {
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
 }
