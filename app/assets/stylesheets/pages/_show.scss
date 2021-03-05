@@ -11,7 +11,27 @@
   // justify-content: space-between;
 }
 
+.container-show {
+  margin-top: 128px;
+}
+
 .table-reservation {
   display: flex;
   justify-content: space-between;
 }
+
+.owner-infos {
+  display: inline;
+}
+
+.owner-address {
+  color: rgba(0,0,0,0.5)
+}
+
+.family {
+  background-color: rgba(0,0,0,0.2);
+}
+
+// .datepicker {
+  
+// }
