@@ -7,19 +7,19 @@
     display: flex;
     align-items: center;
   }
-  
+
   .card-reservation img {
     height: 100%;
     width: 120px;
     object-fit: cover;
   }
-  
+
   .card-reservation h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
   }
-  
+
   .card-reservation p {
     font-size: 12px;
     line-height: 1.4;
@@ -27,12 +27,12 @@
     margin-bottom: 0;
     margin-top: 8px;
   }
-  
+
   .card-reservation .card-reservation-infos {
     padding: 26px;
   }
   
-  .flex-container { 
+.flex-container { 
     height:400px; 
     flex-flow: column wrap; 
     background-color: white; 
@@ -68,5 +68,12 @@
     color: black;
     &:hover {
         color:$secondary;
-    } 
+    }
+}
+
+.supprimer {
+color: black;
+text-align: center;
+
+
 }
