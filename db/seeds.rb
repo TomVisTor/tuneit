@@ -60,11 +60,6 @@ file = File.open(Rails.root.join('db/seeds/instruments/flutetraversière.jpg'))
 flute_traversiere_2.photo.attach(io: file, filename: 'flutetraversière.jpg', content_type: 'image/jpeg')
 flute_traversiere_2.save!
 
-metal = Instrument.new(owner: fx, name: "Guitare Metal", family: "Cordes", price_per_day: 35, description: "Bon état, achetée en 2018, arrache tout.")
-file = File.open(Rails.root.join('db/seeds/instruments/metalGuitare.jpeg'))
-metal.photo.attach(io: file, filename: 'metalGuitare.jpg', content_type: 'image/jpeg')
-metal.save!
-
 guitare_electrique_1 = Instrument.new(owner: thomas, name: "Guitare Electrique Lag", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2019.")
 file = File.open(Rails.root.join('db/seeds/instruments/GuitareelectriqueLag.jpg'))
 guitare_electrique_1.photo.attach(io: file, filename: 'GuitareelectriqueLag.jpg', content_type: 'image/jpeg')
