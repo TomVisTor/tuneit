@@ -33,7 +33,7 @@ class Owner::InstrumentsController < ApplicationController
 
   def destroy
     @instrument = Instrument.find(params[:id])
-    @instrument.destroy(instrument_params)
+    @instrument.destroy
 
     redirect_to owner_instruments_path
   end
