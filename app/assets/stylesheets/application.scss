@@ -22,3 +22,13 @@
 .flex-wrapper h2 {
 	margin-top: 114px;
 }
+
+.cancel {
+	color: black;
+	font-size: 12px;	
+
+	&:hover {
+		color: black;
+		text-decoration: underline;
+	}
+}
