@@ -5,16 +5,17 @@
       <div class="card">
         <h5 class="reservation-status"><%= reservation.status %></h5>
         <% if reservation.status != "Cancelled" %>
-          <div class="btn-reservations">
-            <%= link_to "Annuler",  cancel_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-decline" %>
-          </div>
         <% end %>
         <%= cl_image_tag reservation.instrument.photo.key, class: "card-img-top" %>
         <div class="card-body">
           <h4 class="card-title"><%= reservation.instrument.name %></h4>
           <h6 class="card-text"><%= reservation.instrument.owner.username %></h6>
           <p class="card-text">Prix Total : <%= reservation.total_price %>€</p>
+          <div class="btn-reservations">
+            <%= link_to "Annuler",  cancel_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-decline" %>
+          </div>
         </div>
+      </div>
     <% end %>
   </div>
 </div>
