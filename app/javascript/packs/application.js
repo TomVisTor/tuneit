@@ -29,9 +29,11 @@ import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 import { initTotalPrice } from '../components/total_price';
+import { initNavbarScroll } from '../components/navbar';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initTotalPrice();
+  initNavbarScroll();
   initFlatpickr();
 });

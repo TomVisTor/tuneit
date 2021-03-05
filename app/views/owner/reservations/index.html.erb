@@ -11,13 +11,13 @@
 							<div class="card-reservation">
 								<%= cl_image_tag reservation.instrument.photo.key %>
 								<div class="card-reservation-infos">
-									<h3><%= reservation.instrument.name %></h3>
-									<h5><%= reservation.total_price %>€</h5>
+									<h6><%= reservation.instrument.name %></h6>
+									<h6><%= reservation.total_price %>€</h6>
 									<p>Du: <%= reservation.start_date %></p>
 									<p>Au: <%= reservation.end_date %></p>
 									<div class="btn-reservations">
-										<%= link_to "Refuser", decline_owner_reservation_path(reservation), method: :patch, class: "btn btn-decline" %>
-										<%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class: "btn btn-accept" %>
+										<%= link_to "Refuser", decline_owner_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-decline" %>
+										<%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-accept" %>
 									</div>
 								</div>
 							</div>

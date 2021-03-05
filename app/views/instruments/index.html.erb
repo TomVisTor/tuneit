@@ -1,7 +1,6 @@
-
-
-<div class="container-instruments-index m-5">
+<div class="container container-instruments-index">
   <h2>Consulter la liste<br/>d’instruments à louer</h2>
+
   <div class="card-columns">
     <% @instruments.each do |instrument| %>
       <%= link_to instrument_path(instrument) do %>
