@@ -1,23 +1,70 @@
 <div class="container">
-  <h2>Vos demandes de réservations</h2>
-  <div class="card-columns">
-    <% @reservations.each do |reservation| %>
-      <div class="card">
-        <h5 class="reservation-status"><%= reservation.status %></h5>
-        <% if reservation.status != "Cancelled" %>
-        <% end %>
-        <%= cl_image_tag reservation.instrument.photo.key, class: "card-img-top" %>
-        <div class="card-body">
-          <h4 class="card-title"><%= reservation.instrument.name %></h4>
-          <h6 class="card-text"><%= reservation.instrument.owner.username.titleize %></h6>
-          <p class="card-text">Prix Total : <%= reservation.total_price %>€</p>
-          <div class="btn-reservations">
-            <%= link_to "Annuler",  cancel_reservation_path(reservation), method: :patch, remote: true, class: "cancel" %>
+  <h2 class="title-renter-resevations">Vos demandes de réservations</h2>
+
+
+
+  <hr class="hr-owner-reservations mt-5">
+  <h3>Demandes en attente</h3>
+
+  <div class="row reservation-section">
+      <% @reservations.each do |reservation| %>
+        <% if reservation.status == "Pending" %>
+          <div class="col-sm-12 col-md-6 px-0">
+              <div class="card-reservation card-reservation-pending">
+                <%= cl_image_tag reservation.instrument.photo.key %>
+                <div class="card-reservation-infos">
+                  <h5 class="reservation-status"><%= reservation.status %></h5>
+                  <h5><%= reservation.instrument.name.titleize %></h5>
+                  <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
+                </div>
+              </div>
           </div>
-        </div>
-      </div>
-    <% end %>
+        <% end %> 
+      <% end %>
   </div>
+
+  <hr class="hr-owner-reservations">
+  <h3>Demandes acceptées</h3>
+
+  <div class="row reservation-section">
+      <% @reservations.each do |reservation| %>
+        <% if reservation.status == "Accepted" %>
+          <div class="col-sm-12 col-md-6 px-0">
+              <div class="card-reservation card-reservation-pending">
+                <%= cl_image_tag reservation.instrument.photo.key %>
+                <div class="card-reservation-infos">
+                  <h5 class="reservation-status green"><%= reservation.status %></h5>
+                  <h5><%= reservation.instrument.name.titleize %></h5>
+                  <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
+                </div>
+              </div> 
+          </div>
+        <% end %> 
+      <% end %>
+  </div>
+
+  <hr class="hr-owner-reservations">
+  <h3>Demandes refusées</h3>
+
+  <div class="row reservation-section">
+      <% @reservations.each do |reservation| %>
+        <% if reservation.status == "Declined" %>
+          <div class="col-sm-12 col-md-6 px-0">
+              <div class="card-reservation card-reservation-pending">
+                <%= cl_image_tag reservation.instrument.photo.key %>
+                <div class="card-reservation-infos">
+                  <h5 class="reservation-status red"><%= reservation.status %></h5>
+                  <h5><%= reservation.instrument.name.titleize %></h5>
+                  <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
+                </div>
+              </div> 
+          </div>
+        <% end %> 
+      <% end %>
+  </div>
+
+
+
 </div>
 
 
