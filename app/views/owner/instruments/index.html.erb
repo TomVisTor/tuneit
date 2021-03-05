@@ -1,18 +1,26 @@
-<div class="container">	
+<div class="container">
 	<h2>Mes instruments</h2>
 
 	<%= link_to new_owner_instrument_path  do %>
 		<div class="button mb-3">Ajouter un instrument</div>
-	<% end %> 
+	<% end %>
 
 	<div class="row">
 		<% @instruments.each do |instrument| %>
 		    <div class="col-sm-12 col-md-4">
-		        <div class="card">
+		        <div class="card card-owner-instrument">
 		          <%= cl_image_tag instrument.photo.key %>
 		          <h3><%= instrument.name %></h3>
+		          <h3><%= instrument.price_per_day %>€</h3>
+		          <p><%= instrument.description %></p>
+
+							<%= link_to "Modifier", edit_owner_instrument_path(instrument), class:"button" %>
+							<%= link_to "Supprimer",
+							instrument_path(instrument), class: "supprimer",
+							method: :delete,
+							data: { confirm: "Are you sure?" } %>
 		        </div>
 		    </div>
 		<% end %>
-	</div>	 
+	</div>
 </div>

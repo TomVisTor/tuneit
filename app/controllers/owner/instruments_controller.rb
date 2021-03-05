@@ -18,7 +18,24 @@ class Owner::InstrumentsController < ApplicationController
   	end
   end
 
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end
+
+  def update
+    @instrument = Instrument.find(params[:id])
+    if @instrument.update(instrument_params)
+  		redirect_to owner_instruments_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @instrument = Instrument.find(params[:id])
+    @instrument.destroy(instrument_params)
+
+    redirect_to owner_instruments_path
   end
 
   private

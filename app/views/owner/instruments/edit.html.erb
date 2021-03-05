@@ -1,0 +1,16 @@
+<div class="container">
+	<h2>Mofidier la fiche instrument</h2>
+
+	<div class="row">
+		<div class="col-sm-12 col-md-6 offset-md-3">
+			<%= simple_form_for([:owner, @instrument]) do |f| %>
+				<%= f.input :name %>
+				<%= f.input :price_per_day %>
+				<%= f.input :description %>
+				<%= f.select :family, Instrument::FAMILY %>
+		  		<%= f.input :photo, as: :file %>
+		  		<%= f.submit class: "button" %>
+			<% end %>
+		</div>
+	</div>
+</div>

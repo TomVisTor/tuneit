@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+
   def index
     @reservations = Reservation.all.where(renter: current_user)
   end
@@ -20,12 +21,13 @@ class ReservationsController < ApplicationController
     end
   end
 
-  # def update
-  #   @reservation.status = "Cancelled"
-  #   if @reservation.update(reservation_params)
-  #     redirect_to reservations_path, notice: 'Reservation was successfully updated.'
-  #   end
-  # end
+  def cancel
+    @reservation = Reservation.find(params[:id])
+		@reservation.status = "Cancelled"
+		if @reservation.save!
+			redirect_to reservations_path
+		end
+	end
 
 
   private
