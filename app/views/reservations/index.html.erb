@@ -13,7 +13,7 @@
               <div class="card-reservation card-reservation-pending">
                 <%= cl_image_tag reservation.instrument.photo.key %>
                 <div class="card-reservation-infos">
-                  <h5 class="reservation-status"><%= reservation.status %></h5>
+                  <h5 class="reservation-status">En attente</h5>
                   <h5><%= reservation.instrument.name.titleize %></h5>
                   <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
                 </div>
@@ -33,7 +33,7 @@
               <div class="card-reservation card-reservation-pending">
                 <%= cl_image_tag reservation.instrument.photo.key %>
                 <div class="card-reservation-infos">
-                  <h5 class="reservation-status green"><%= reservation.status %></h5>
+                  <h5 class="reservation-status green">Acceptée</h5>
                   <h5><%= reservation.instrument.name.titleize %></h5>
                   <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
                 </div>
@@ -53,7 +53,7 @@
               <div class="card-reservation card-reservation-pending">
                 <%= cl_image_tag reservation.instrument.photo.key %>
                 <div class="card-reservation-infos">
-                  <h5 class="reservation-status red"><%= reservation.status %></h5>
+                  <h5 class="reservation-status red">Refusée</h5>
                   <h5><%= reservation.instrument.name.titleize %></h5>
                   <p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
                 </div>
