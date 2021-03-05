@@ -1,11 +1,23 @@
 .card-reservation {
     overflow: hidden;
-    height: 160px;
+    height: 180px;
     border-radius: 8px;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
+    margin: 16px;
+
+    h5 {
+      font-size: 24px;
+    }
+
+    h6 {
+      color: rgba(0,0,0,0.6);
+      font-family: "Work Sans";
+      margin-bottom: 24px;
+    }
+
   }
 
   .card-reservation img {
@@ -28,8 +40,8 @@
     margin-top: 8px;
   }
 
-  .card-reservation .card-reservation-infos {
-    padding: 26px;
+.card-reservation-infos {
+    padding: 0 24px;
   }
   
 .flex-container { 
@@ -48,7 +60,6 @@
 } 
 
 .cards-owner-reservations{
-    margin: 16px;
 }
 
 .card-reservation .btn-reservations {
@@ -71,9 +82,11 @@
     }
 }
 
-.supprimer {
-color: black;
-text-align: center;
-
-
+.card-reservation-pending {
+  height: 220px;
 }
+
+.supprimer {
+  color: black;
+  text-align: center;
+  }
