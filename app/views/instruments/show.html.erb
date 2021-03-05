@@ -7,13 +7,13 @@
     </div>
     <div class="col-sm-12 col-md-5">
       <div class="container-reservation">
-        <div> 
+        <div>
           <div class="table-reservation"> <%# owner info %>
             <div>
               Propriétaire :
             </div>
             <div>
-              <%= @instrument.owner.username %>
+              <%= @instrument.owner.username.capitalize %>
             </div>
           </div>
           <div>
@@ -47,7 +47,7 @@
             <% end %>
           </div>
           <div>
-            <p data-price-per-day="<%= @instrument.price_per_day %>" id="total-price">Prix Total : ...</p> 
+            <p data-price-per-day="<%= @instrument.price_per_day %>" id="total-price">Prix Total : ...</p>
           </div>
         </div>
         <!-- <a href="#" class="button">Réserver</a> -->
