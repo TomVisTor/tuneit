@@ -59,8 +59,6 @@
     font-size: 30px;
 } 
 
-.cards-owner-reservations{
-}
 
 .card-reservation .btn-reservations {
     text-align: end;
@@ -89,4 +87,16 @@
 .supprimer {
   color: black;
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+    &:hover {
+    color:$secondary;
+    }
+  }
+
+  .modifier{
+    &:hover {
+      color:$secondary;
+      }
   }
