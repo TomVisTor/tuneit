@@ -1,14 +1,20 @@
 <div class="container">
-  <h2>Consulter la liste de vos réservations</h2>
+  <h2>Vos demmandes de réservations</h2>
 <%# <div class="container container-instruments-index"> %>
   <div class="card-columns">
     <% @reservations.each do |reservation| %>
         <div class="card">
-                  <div class="card-body">
-             <h5 class="reservation-status"><%= reservation.status %></h5>
-          <%= cl_image_tag reservation.instrument.photo.key, class: "card-img-top"%>
-          <h4  class="card-title"><%= reservation.instrument.name %></h4>
-          <h6 class="card-text"><%= reservation.instrument.owner.username %></h6>
+          <div class="card-body">
+            <h5 class="reservation-status"><%= reservation.status %></h5>
+              <% if reservation.status != "Cancelled" %>
+                <div class="btn-reservations">
+                  <%= link_to "Annuler",  cancel_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-decline" %>
+                </div>
+              <% end %>
+            <%= cl_image_tag reservation.instrument.photo.key, class: "card-img-top"%>
+            <h4  class="card-title"><%= reservation.instrument.name %></h4>
+            <h6 class="card-text"><%= reservation.instrument.owner.username %></h6>
+            <h5>Prix Total :<%= reservation.total_price %>€</h5>
           </div>
         </div>
     <% end %>
