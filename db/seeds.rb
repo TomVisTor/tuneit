@@ -32,8 +32,18 @@ file = File.open(Rails.root.join('db/seeds/users/hippo.png'))
 hippo.photo.attach(io: file, filename: 'hippo.png', content_type: 'image/png')
 hippo.save!
 
+italian = User.new(email: "italian@gmail.com", password: "123456", username: "Mr Pasta", address: "Venezia" )
+file = File.open(Rails.root.join('db/seeds/users/italian.png'))
+italian.photo.attach(io: file, filename: 'italian.png', content_type: 'image/png')
+italian.save!
+
 
 puts "creating instruments"
+
+orgue = Instrument.new(owner: italian, name: "Orgue de Barbarie", family: "Vents", price_per_day: 10, description: "Très bon état, à Nono.")
+file = File.open(Rails.root.join('db/seeds/instruments/orgue.jpg'))
+contrebasse.photo.attach(io: file, filename: 'orgue.jpg', content_type: 'image/jpeg')
+contrebasse.save!
 
 contrebasse = Instrument.new(owner: miebi, name: "Contrebasse Strunal 1930", family: "Cordes", price_per_day: 15, description: "Très bon état, achetée en 2014.")
 file = File.open(Rails.root.join('db/seeds/instruments/Contrebasse.jpg'))
@@ -49,6 +59,11 @@ flute_traversiere_2 = Instrument.new(owner: fx, name: "flute traversière 1988",
 file = File.open(Rails.root.join('db/seeds/instruments/flutetraversière.jpg'))
 flute_traversiere_2.photo.attach(io: file, filename: 'flutetraversière.jpg', content_type: 'image/jpeg')
 flute_traversiere_2.save!
+
+metal = Instrument.new(owner: fx, name: "Guitare Metal", family: "Cordes", price_per_day: 35, description: "Bon état, achetée en 2018, arrache tout.")
+file = File.open(Rails.root.join('db/seeds/instruments/metalGuitare.jpg'))
+metal.photo.attach(io: file, filename: 'metalGuitare.jpg', content_type: 'image/jpeg')
+metal.save!
 
 guitare_electrique_1 = Instrument.new(owner: thomas, name: "Guitare Electrique Lag", family: "Cordes", price_per_day: 20, description: "Très bon état, achetée en 2019.")
 file = File.open(Rails.root.join('db/seeds/instruments/GuitareelectriqueLag.jpg'))
