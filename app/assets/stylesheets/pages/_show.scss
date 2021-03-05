@@ -12,7 +12,7 @@
 }
 
 .container-show {
-  margin-top: 128px;
+  margin-top: 102px;
 }
 
 .table-reservation {
@@ -29,9 +29,16 @@
 }
 
 .family {
-  background-color: rgba(0,0,0,0.2);
+  background-color: $secondary;
+  border-radius: 4px;
+  padding: 0 7px;
 }
 
-// .datepicker {
-  
-// }
+.link-retour {
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
+}
