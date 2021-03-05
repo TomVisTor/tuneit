@@ -1,18 +1,19 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar">
   <%= link_to "/", class: "navbar-brand" do %>
-  <!-- # <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %> -->
-    <%= image_tag "logo_tuneit_black.png" %>
+    <%= image_tag "logo_tuneit_white.png" %>
+  <% end %>
 
-    <% end %>
-  <div class="d-flex mr-auto">
+  <%= link_to "Tous les instruments", instruments_path, class: "nav-link white ml-4" %>
+
+  <div class="search-bar">
     <%= form_tag instruments_path, method: :get, class: "mx-auto d-flex mb-0 align-items-center" do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control h-100 bg-secondary border-dark",
+        class: "form-control h-100",
         placeholder: "Trouver un instrument"
       %>
     <% end %>
-    <button class="button m-0 border-0 rounded-left">
+    <button class="icon-loupe border-0 rounded-left">
       <i class="fas fa-search"></i>
     </button>
   </div>
@@ -24,9 +25,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <%# <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        <%# </li> %>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -35,14 +33,23 @@
           <% end %>
         
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Espace propriétaire", owner_instruments_path, class: "dropdown-item" %>
-            <%= link_to "Espace locataire", reservations_path, class: "dropdown-item" %>
+            <span class="nav-section-title">Espace propriétaire</span>
+            <%= link_to "Réservations", owner_reservations_path, class: "dropdown-item" %>
+            <%= link_to "Mes instruments", owner_instruments_path, class: "dropdown-item" %>
+
+            <hr>
+
+            <span class="nav-section-title">Espace Locataire</span>
+            <%= link_to "Mes demandes", reservations_path, class: "dropdown-item" %>
+
+            <hr>
+
             <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Connexion", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Connexion", new_user_session_path, class: "nav-link white" %>
         </li>
       <% end %>
     </ul>

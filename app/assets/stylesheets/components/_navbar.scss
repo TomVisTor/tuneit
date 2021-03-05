@@ -1,9 +1,23 @@
 .navbar-lewagon {
   justify-content: space-between;
-  // display: flex;
-  // position: fixed;
-  // width: 100%;
-  // background: white;
+  background: rgba(0,0,0,0);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: -65px;
+  transition: 0.2s ease;
+}
+
+.avatar:hover {
+  box-shadow: 3px 3px 13px white;
+  cursor: pointer;
+}
+
+.navbar-background {
+  background-color: $secondary;
+  box-shadow: 3px 3px 14px rgba(210,179,161,0.1);
+  color: black;
+  transition: 0.2s ease;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,4 +26,70 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 50px;
+}
+
+.nav-section-title {
+  color: $secondary;
+	font-size: 12px;
+	padding: 0.25rem 1.5rem;
+}
+
+.nav-link {
+  font-family: "GT Flexa Mono Beta v7";
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.white {
+  color: white !important ;
+}
+
+hr {
+  border-top: solid 1px $secondary;
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  padding: 1rem 0;
+  opacity: 0.98;
+}
+
+.icon-loupe {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  right: 14px;
+  top: 8px;
+  color: white;
+}
+
+.form-control {
+  border-radius: 25px;
+  font-family: "GT Flexa Mono Beta v7";
+  border: solid 1px white;
+  background-color: rgba(0,0,0,0);
+  color: white !important ;
+
+  &:focus {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
+    outline: none !important;
+    border: solid 1px white;
+  }
+
+}
+
+.form-control::placeholder {
+  // color: white;
+  color: white;
+  font-size: 14px;
+}
+
+.search-bar {
+  margin-left: auto;
+  margin-right: 20px;
+  position: relative;
 }
