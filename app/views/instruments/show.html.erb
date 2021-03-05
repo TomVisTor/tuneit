@@ -25,7 +25,6 @@
             </div>
             <hr>
           </div>
-
           <div class="table-reservation mt-4">
             <div class="d-flex">
               <%= cl_image_tag @instrument.owner.photo.key, width: 50, height: 50, crop: :fill, class: 'owner-avatar rounded-circle'  %>
@@ -51,6 +50,10 @@
               <%= f.submit 'Réserver',class: 'button' %>
             <% end %>
           </div>
+          <div>
+            <p data-price-per-day="<%= @instrument.price_per_day %>" id="total-price">Prix Total : ...</p>
+          </div>
+        </div>
         <!-- <a href="#" class="button">Réserver</a> -->
       </div>
     </div>

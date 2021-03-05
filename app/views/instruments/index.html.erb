@@ -3,14 +3,16 @@
 
   <div class="card-columns">
     <% @instruments.each do |instrument| %>
-      <%= link_to instrument_path(instrument) do %>
-        <div class="card">
-          <%= cl_image_tag instrument.photo.key, class: "card-img-top"%>
-          <div class="card-body">
-            <h3  class="card-title"><%= instrument.name.titleize %></h3>
-            <p class="card-text"><%= instrument.owner.address %> | <%= instrument.price_per_day %>€/jour</p>
+      <% if instrument.owner_id != current_user.id %>
+        <%= link_to instrument_path(instrument) do %>
+          <div class="card">
+            <%= cl_image_tag instrument.photo.key, class: "card-img-top"%>
+            <div class="card-body">
+              <h3  class="card-title"><%= instrument.name.titleize %></h3>
+              <p class="card-text"><%= instrument.owner.address %> | <%= instrument.price_per_day %>€/jour</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
