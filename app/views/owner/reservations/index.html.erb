@@ -13,6 +13,8 @@
 								<div class="card-reservation-infos">
 									<h6><%= reservation.instrument.name %></h6>
 									<h6><%= reservation.total_price %>€</h6>
+									<% user = User.find(reservation.renter_id) %>
+									<p>Demande de <%= user.username %></p>
 									<p>Du: <%= reservation.start_date %></p>
 									<p>Au: <%= reservation.end_date %></p>
 									<div class="btn-reservations">
