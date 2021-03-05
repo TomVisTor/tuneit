@@ -2,26 +2,24 @@
 	<h2>Espace propriétaire</h2>
 
 	<h3>Demandes en attente</h3>
- 	<div class="row">
+ 	<div class="row reservation-section">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Pending" %>
-					<div class="col-sm-12 col-md-6">
-						<div class=cards-owner-reservations>
-							<div class="card-reservation">
+					<div class="col-sm-12 col-md-6 px-0">
+							<div class="card-reservation card-reservation-pending">
 								<%= cl_image_tag reservation.instrument.photo.key %>
 								<div class="card-reservation-infos">
-									<h6><%= reservation.instrument.name %></h6>
-									<h6><%= reservation.total_price %>€</h6>
-									<p>Du: <%= reservation.start_date %></p>
-									<p>Au: <%= reservation.end_date %></p>
-									<div class="btn-reservations">
+									<h5><%= reservation.instrument.name %></h5>
+									<% user = User.find(reservation.renter_id) %>
+									<h6><%= reservation.total_price %>€ | Demande de <%= user.username %></h6>
+									<p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
+									<div class="btn-reservations mt-3">
 										<%= link_to "Refuser", decline_owner_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-decline" %>
 										<%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, remote: true, class: "btn btn-accept" %>
 									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 				<% end %> 
 			<% end %>
@@ -29,20 +27,18 @@
 	</div>
 
 	<h3>Demandes acceptées</h3>
- 	<div class="row">
+ 	<div class="row reservation-section">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Accepted" %>
-					<div class="col-sm-12 col-md-6">
-						<div class=cards-owner-reservations>
-							<div class="card-reservation">
-								<%= cl_image_tag reservation.instrument.photo.key %>
-								<div class="card-reservation-infos">
-									<h3><%= reservation.instrument.name %></h3>
-									<h5><%= reservation.total_price %>€</h5>
-									<p>Du: <%= reservation.start_date %></p>
-									<p>Au: <%= reservation.end_date %></p>
-								</div>
+					<div class="col-sm-12 col-md-6 px-0">
+						<div class="card-reservation">
+							<%= cl_image_tag reservation.instrument.photo.key %>
+							<div class="card-reservation-infos">
+								<h5><%= reservation.instrument.name %></h5>
+								<% user = User.find(reservation.renter_id) %>
+								<h6><%= reservation.total_price %>€ | Demande de <%= user.username %></h6>
+								<p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
 							</div>
 						</div>
 					</div>
@@ -52,20 +48,18 @@
 	</div>
 
 	<h3>Demandes refusées</h3>
- 	<div class="row">
+ 	<div class="row reservation-section">
 		<% @instruments.each do |instrument| %>
 			<% instrument.reservations.each do |reservation| %>
 				<% if reservation.status == "Declined" %>
-					<div class="col-sm-12 col-md-6">
-						<div class=cards-owner-reservations>
-							<div class="card-reservation">
-								<%= cl_image_tag reservation.instrument.photo.key %>
-								<div class="card-reservation-infos">
-									<h3><%= reservation.instrument.name %></h3>
-									<h5><%= reservation.total_price %>€</h5>
-									<p>Du: <%= reservation.start_date %></p>
-									<p>Au: <%= reservation.end_date %></p>
-								</div>
+					<div class="col-sm-12 col-md-6 px-0">
+						<div class="card-reservation">
+							<%= cl_image_tag reservation.instrument.photo.key %>
+							<div class="card-reservation-infos">
+								<h5><%= reservation.instrument.name %></h5>
+								<% user = User.find(reservation.renter_id) %>
+								<h6><%= reservation.total_price %>€ | Demande de <%= user.username %></h6>
+								<p>Du <em><%= reservation.start_date %></em> au <em><%= reservation.end_date %></em></p>
 							</div>
 						</div>
 					</div>
