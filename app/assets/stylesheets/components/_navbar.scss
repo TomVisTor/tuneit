@@ -6,7 +6,7 @@
   z-index: 10;
   margin-bottom: -65px;
   transition: 0.2s ease;
-  
+
   .form-control::placeholder {
     // color: white;
     color: white;
@@ -25,6 +25,7 @@
     border: solid 1px white;
     background-color: rgba(0,0,0,0);
     color: white !important ;
+    width: 240px;
 
     &:focus {
       background-color: rgba(0,0,0,0);
@@ -89,8 +90,10 @@ hr {
 .icon-loupe {
   background: rgba(0,0,0,0);
   position: absolute;
-  right: 14px;
-  top: 8px;
+  right: 11px;
+  top: 5px;
   color: white;
   z-index: 100;
 }
+
+

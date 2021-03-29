@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tuneit</title>
+    <title>Tune It</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,12 +12,15 @@
   </head>
 
   <body>
+    <div class="small-screens">
+      <h3 style="text-transform: none">At the moment our website is desktop only as we are currently working on the mobile version. Thank you for your understanding!</h3>
+    </div>
+
     <div class="flex-wrapper">
       <div>
         <%= render 'shared/navbar' %>
         <%= render 'shared/flashes' %>
         <%= yield %>
-
       </div>
 
       <footer>
