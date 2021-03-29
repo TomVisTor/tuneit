@@ -80,5 +80,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['POSTGRESQL_ADDON_URI']
-  database: tune-it_production %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
