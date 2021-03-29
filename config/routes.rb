@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
     resources :instruments, only: [ :index, :new, :create, :destroy, :edit, :update ]
   end
+
+  get '/test', to: 'pages#test'
 end
