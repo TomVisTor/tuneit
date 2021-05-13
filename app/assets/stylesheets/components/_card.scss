@@ -1,13 +1,14 @@
 .card {
+  align-items: center;
   padding: 24px;
   border-radius: 4px;
-  box-shadow: 3px 3px 8px rgba(40,40,40,0.1);
   border: 0px;
   margin-bottom: 32px;
-  background-color: $light-gray;
+  background-color: rgba(0,0,0,0);
   color: $off-black;
   text-decoration: none;
-  transition: box-shadow 0.2s ease;
+  text-align: center !important;
+  transition: border 0.4s ease;
 
   img {
     border-radius: 4px;
@@ -16,11 +17,26 @@
 
   &:hover {
     text-decoration: none;
-    box-shadow: 3px 3px 13px rgba(255,255,255,0.7);
-    transition: box-shadow 0.2s ease;
+    transition: border 0.4s ease;
   }
 }
 
+.card-title {
+  text-decoration: none ;
+
+  &:hover {
+    text-decoration: underline ;
+  }
+}
+
+.card-img-top {
+  opacity: 0.8;
+  transition: 0.4s ease;
+}
+.card-img-top:hover {
+  opacity: 1;
+  transition: 0.4s ease;
+}
 
 .card-body {
   padding: 0;
