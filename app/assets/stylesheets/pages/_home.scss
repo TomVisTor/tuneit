@@ -6,7 +6,7 @@
 
 .about {
   text-align: center;
-  padding: 52px 32px;
+  padding: 60px 32px;
 
   p {
     font-family: "GT Alpina Fine Beta v6";
@@ -14,4 +14,12 @@
     line-height: 1.2em;
     margin-top: 24px;
   }
+}
+.latest-headlines {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+a {
+  color: black;
 }
