@@ -22,4 +22,9 @@
 }
 a {
   color: black;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
