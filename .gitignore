@@ -43,3 +43,5 @@ yarn-debug.log*
 .DS_Store
 .env*
 .env*
+.env*
+public/assets

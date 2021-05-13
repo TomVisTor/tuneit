@@ -78,6 +78,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
+# production:
+#   <<: *default
+#   url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+
 production:
   <<: *default
-  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+  database: tune-it_production
+  username: tune-it
+  password: <%= ENV['TUNE-IT_DATABASE_PASSWORD'] %>

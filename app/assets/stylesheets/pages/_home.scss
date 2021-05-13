@@ -3,3 +3,28 @@
   display: flex;
   justify-content: center;
 }
+
+.about {
+  text-align: center;
+  padding: 60px 32px;
+
+  p {
+    font-family: "GT Alpina Fine Beta v6";
+    font-size: 38px;
+    line-height: 1.2em;
+    margin-top: 24px;
+  }
+}
+.latest-headlines {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+a {
+  color: black;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

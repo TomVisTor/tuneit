@@ -14,41 +14,45 @@
 // }
 // $my-font: "Font Name";
 
-// @font-face {
-//   font-family: "GT Flexa";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "GT Flexa";
+@font-face {
+    font-family: 'GT Alpina Beta v6';
+    src: url('GTAlpinaBetav6-Thin.eot');
+    src: url('GTAlpinaBetav6-Thin.eot?#iefix') format('embedded-opentype'),
+        url('GTAlpinaBetav6-Thin.woff2') format('woff2'),
+        url('GTAlpinaBetav6-Thin.woff') format('woff'),
+        url('GTAlpinaBetav6-Thin.ttf') format('truetype'),
+        url('GTAlpinaBetav6-Thin.svg#GTAlpinaBetav6-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
-    font-family: 'GT Flexa Mono Beta v7';
-    src: font-url('GTFlexaMonoBetav7-Regular.eot');
-    src: font-url('GTFlexaMonoBetav7-Regular.eot?#iefix') format('embedded-opentype'),
-        font-url('GTFlexaMonoBetav7-Regular.woff2') format('woff2'),
-        font-url('GTFlexaMonoBetav7-Regular.woff') format('woff'),
-        font-url('GTFlexaMonoBetav7-Regular.ttf') format('truetype'),
-        font-url('GTFlexaMonoBetav7-Regular.svg#GTFlexaMonoBetav7-Regular') format('svg');
-    font-weight: normal;
+    font-family: 'GT Alpina Fine Beta v6';
+    src: url('GTAlpinaFineBetav6-Thin.eot');
+    src: url('GTAlpinaFineBetav6-Thin.eot?#iefix') format('embedded-opentype'),
+        url('GTAlpinaFineBetav6-Thin.woff2') format('woff2'),
+        url('GTAlpinaFineBetav6-Thin.woff') format('woff'),
+        url('GTAlpinaFineBetav6-Thin.ttf') format('truetype'),
+        url('GTAlpinaFineBetav6-Thin.svg#GTAlpinaFineBetav6-Thin') format('svg');
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 // @font-face {
 //     font-family: 'GT Flexa Mono Beta v7';
-//     src: url('GTFlexaMonoBetav7-Light.eot');
-//     src: url('GTFlexaMonoBetav7-Light.eot?#iefix') format('embedded-opentype'),
-//         url('GTFlexaMonoBetav7-Light.woff2') format('woff2'),
-//         url('GTFlexaMonoBetav7-Light.woff') format('woff'),
-//         url('GTFlexaMonoBetav7-Light.ttf') format('truetype'),
-//         url('GTFlexaMonoBetav7-Light.svg#GTFlexaMonoBetav7-Light') format('svg');
-//     font-weight: 300;
+//     src: font-url('GTFlexaMonoBetav7-Regular.eot');
+//     src: font-url('GTFlexaMonoBetav7-Regular.eot?#iefix') format('embedded-opentype'),
+//         font-url('GTFlexaMonoBetav7-Regular.woff2') format('woff2'),
+//         font-url('GTFlexaMonoBetav7-Regular.woff') format('woff'),
+//         font-url('GTFlexaMonoBetav7-Regular.ttf') format('truetype'),
+//         font-url('GTFlexaMonoBetav7-Regular.svg#GTFlexaMonoBetav7-Regular') format('svg');
+//     font-weight: normal;
 //     font-style: normal;
 //     font-display: swap;
 // }
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "GT Flexa Mono Beta v7", "Helvetica", "sans-serif";
+$headers-font: "GT Alpina Beta v6", "Helvetica", "sans-serif";

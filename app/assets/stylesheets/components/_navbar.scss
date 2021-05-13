@@ -6,45 +6,41 @@
   z-index: 10;
   margin-bottom: -65px;
   transition: 0.2s ease;
-  
+  height: 65px;
+
   .form-control::placeholder {
-    // color: white;
     color: white;
     font-size: 14px;
   }
 
   .search-bar {
-    margin-left: auto;
-    margin-right: 20px;
-    position: relative;
+    position: fixed;
+    right: 70px;
   }
 
   .form-control {
     border-radius: 25px;
-    font-family: "GT Flexa Mono Beta v7";
+    font-family: "GT Alpina Beta v6";
     border: solid 1px white;
     background-color: rgba(0,0,0,0);
     color: white !important ;
+    width: 180px;
 
     &:focus {
       background-color: rgba(0,0,0,0);
       color: white;
-      box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
       outline: none !important;
       border: solid 1px white;
     }
-
   }
 }
 
 .avatar:hover {
-  box-shadow: 3px 3px 13px white;
   cursor: pointer;
 }
 
 .navbar-background {
   background-color: $secondary;
-  box-shadow: 3px 3px 14px rgba(210,179,161,0.1);
   color: black;
   transition: 0.2s ease;
 }
@@ -64,8 +60,10 @@
 }
 
 .nav-link {
-  font-family: "GT Flexa Mono Beta v7";
+  font-family: "Work Sans";
   font-size: 14px;
+  text-transform: uppercase;
+  padding: 0.5rem;
 
   &:hover {
     text-decoration: underline;
@@ -76,9 +74,12 @@
   color: white !important ;
 }
 
-hr {
-  border-top: solid 1px $secondary;
-  opacity: 0.5;
+.navbar-hr {
+  border-top: solid 1px white;
+  position: fixed;
+  top: 48px;
+  left: 24px;
+  width: calc(100% - 44px);
 }
 
 .dropdown-menu {
@@ -89,8 +90,17 @@ hr {
 .icon-loupe {
   background: rgba(0,0,0,0);
   position: absolute;
-  right: 14px;
-  top: 8px;
+  right: 11px;
+  top: 5px;
   color: white;
   z-index: 100;
+}
+
+.logo {
+  font-family: "GT Alpina Fine Beta v6";
+  color: white;
+  font-size: 34px;
+  position: fixed;
+  top: 8px;
+  left: calc(50% - 50px);
 }

@@ -1,20 +1,36 @@
 <div class="banner">
   <div class="container">
-    <h1>Tune It</h1>
-    <p>Louer vos instruments de musique de particulier à particulier</p>
+    <!-- <div class="headline">Louer vos instruments</div> -->
+    <h4>Louer vos instruments</h4>
+    <p>Louer vos instruments de musique de particulier à particulier, pour débutants, amateurs et professionnels</p>
+    <div class="button button-banner">Voir plus</div>
   </div>
 </div>
 
-<div class="container">
-  <h2>Derniers instruments postés</h2>
+<div class="container about">
+  <h4>A propos</h4>
 
+  <p>Nous avons conçu Tune It afin de permettre aux amateurs de musiques comme aux professionnels de louer un intrument de musique à un particulier.</p>
+</div>
 
+<div class="mt-0 pt-0 px-4">
+  <hr>
+  <div class="latest-headlines">
+    <h4>Derniers instruments postés</h4>
+    <h4>
+      <%= link_to "Voir la liste complète", instruments_path %>  <i class="fas fa-arrow-right" style="font-size: 13px"></i>
+    </h4>
+
+  </div>
+</div>
+
+<div class="container my-0 py-0">
   <div class="row">
     <% @instruments.first(3).each do |instrument| %>
     <div class="col-sm-12 col-md-4">
       <%= link_to instrument_path(instrument) do %>
         <div class="card">
-          <%= cl_image_tag instrument.photo.key %>
+          <%= cl_image_tag instrument.photo.key, class: "card-img-top" %>
           <h3><%= instrument.name %></h3>
           <p>Nantes | 16€/day</p>
         </div>
@@ -22,16 +38,4 @@
     </div>
   <% end %>
 
-<!--   <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <div class="card">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9f%2FStainer.jpg&f=1&nofb=1" alt="">
-        <h3>Nuova Alto Saxophone</h3>
-        <p>Nantes | 16€/day</p>
-      </div>
-  </div> -->
-
-  <div class="container-btn">
-    <%= link_to "Voir plus", instruments_path, class: "button"  %>
-  </div>
 </div>

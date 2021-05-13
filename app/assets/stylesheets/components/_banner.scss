@@ -5,18 +5,31 @@
 .banner {
   height: 80vh;
   display: flex;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   justify-content: center;
   flex-direction: column;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('img-banner-homepage.jpeg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('img-banner-homepage.jpg');
   background-size: cover;
   background-position: center;
   color: white;
 
   p {
-    font-size: 30px;
+    font-size: 38px;
+    font-family: "GT Alpina Fine Beta v6";
     max-width: 600px;
-    margin: 0 auto;
+    line-height: 1.2em;
+    margin-top: 12px;
+    margin-bottom: 20px;
   }
+
+  .button-banner {
+    background: $secondary;
+    display: inline-block;
+    border-radius: 4px;
+    color: black;
+  }
+}
+.headline {
+
 }
