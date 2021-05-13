@@ -6,6 +6,7 @@
   z-index: 10;
   margin-bottom: -65px;
   transition: 0.2s ease;
+  height: 65px;
 
   .form-control::placeholder {
     color: white;
@@ -13,7 +14,6 @@
   }
 
   .search-bar {
-
     position: fixed;
     right: 70px;
   }
@@ -29,7 +29,6 @@
     &:focus {
       background-color: rgba(0,0,0,0);
       color: white;
-      box-shadow: 3px 3px 13px rgba(255,255,255,0.4);
       outline: none !important;
       border: solid 1px white;
     }
@@ -42,7 +41,6 @@
 
 .navbar-background {
   background-color: $secondary;
-  // box-shadow: 3px 3px 14px rgba(210,179,161,0.1);
   color: black;
   transition: 0.2s ease;
 }
@@ -76,8 +74,12 @@
   color: white !important ;
 }
 
-hr {
-  border-top: solid 1px black;
+.navbar-hr {
+  border-top: solid 1px white;
+  position: fixed;
+  top: 48px;
+  left: 24px;
+  width: calc(100% - 44px);
 }
 
 .dropdown-menu {

@@ -49,6 +49,10 @@
   display: none;
 }
 
+hr {
+  border-top: solid 1px black;
+}
+
 @media screen and (max-width: 684px) {
   .small-screens {
     background-color: $secondary;
