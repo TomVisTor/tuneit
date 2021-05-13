@@ -21,7 +21,7 @@
 
   .form-control {
     border-radius: 25px;
-    font-family: "GT Flexa Mono Beta v7";
+    font-family: "GT Alpina Beta v6";
     border: solid 1px white;
     background-color: rgba(0,0,0,0);
     color: white !important ;
@@ -65,8 +65,9 @@
 }
 
 .nav-link {
-  font-family: "GT Flexa Mono Beta v7";
+  font-family: "Work Sans";
   font-size: 14px;
+  text-transform: uppercase;
 
   &:hover {
     text-decoration: underline;
@@ -96,4 +97,8 @@ hr {
   z-index: 100;
 }
 
-
+.logo {
+  font-family: "GT Alpina Fine Beta v6";
+  color: white;
+  font-size: 38px;
+}

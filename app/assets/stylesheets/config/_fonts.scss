@@ -40,18 +40,18 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'GT Flexa Mono Beta v7';
-    src: font-url('GTFlexaMonoBetav7-Regular.eot');
-    src: font-url('GTFlexaMonoBetav7-Regular.eot?#iefix') format('embedded-opentype'),
-        font-url('GTFlexaMonoBetav7-Regular.woff2') format('woff2'),
-        font-url('GTFlexaMonoBetav7-Regular.woff') format('woff'),
-        font-url('GTFlexaMonoBetav7-Regular.ttf') format('truetype'),
-        font-url('GTFlexaMonoBetav7-Regular.svg#GTFlexaMonoBetav7-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'GT Flexa Mono Beta v7';
+//     src: font-url('GTFlexaMonoBetav7-Regular.eot');
+//     src: font-url('GTFlexaMonoBetav7-Regular.eot?#iefix') format('embedded-opentype'),
+//         font-url('GTFlexaMonoBetav7-Regular.woff2') format('woff2'),
+//         font-url('GTFlexaMonoBetav7-Regular.woff') format('woff'),
+//         font-url('GTFlexaMonoBetav7-Regular.ttf') format('truetype'),
+//         font-url('GTFlexaMonoBetav7-Regular.svg#GTFlexaMonoBetav7-Regular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";

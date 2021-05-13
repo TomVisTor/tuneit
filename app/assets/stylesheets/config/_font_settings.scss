@@ -11,15 +11,25 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-transform: capitalize;
 }
 
+h4 {
+  text-transform: uppercase;
+  font-family: "Work Sans";
+  font-size: 16px;
+}
+
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h5.reservation-status{
   text-transform: uppercase;
   color: orange;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
